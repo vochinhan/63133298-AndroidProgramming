@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/vtA"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="a :"
+        android:textSize="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edtA"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="48dp"
+        android:textSize="40dp"
+        app:layout_constraintStart_toEndOf="@+id/vtA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vtB"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:text="b :"
+        android:textSize="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vtA" />
+
+    <EditText
+        android:id="@+id/edtB"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:textSize="40dp"
+        app:layout_constraintStart_toEndOf="@+id/vtB"
+        app:layout_constraintTop_toBottomOf="@+id/edtA" />
+
+    <TextView
+        android:id="@+id/vtRes"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:text="res:"
+        android:textSize="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vtB" />
+
+    <EditText
+        android:id="@+id/edtRes"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:textSize="40dp"
+        android:enabled="false"
+        app:layout_constraintStart_toEndOf="@+id/vtRes"
+        app:layout_constraintTop_toBottomOf="@+id/edtB" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="344dp"
+        android:text="+"
+        android:textSize="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="344dp"
+        android:text="-"
+        android:textSize="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="516dp"
+        android:text="x"
+        android:textSize="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="516dp"
+        android:text="/"
+        android:textSize="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
