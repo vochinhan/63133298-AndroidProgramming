@@ -11,7 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="BMI Calculator"
-        
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
         />
 
     <LinearLayout
@@ -28,10 +31,65 @@
             android:paddingRight="20dp"
             />
         <EditText
+            android:id="@+id/edtHeight"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:hint="(cm)"
             android:textSize="20dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Weight"
+            android:textSize="30dp"
+            android:paddingRight="20dp"
+            />
+        <EditText
+            android:id="@+id/edtWeight"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="(kg)"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:paddingHorizontal="30dp"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="BMI"
+            android:textSize="30dp"
+            android:paddingRight="20dp"
+            />
+        <EditText
+            android:id="@+id/edtBMI"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:enabled="false"
             />
     </LinearLayout>
 </LinearLayout>
