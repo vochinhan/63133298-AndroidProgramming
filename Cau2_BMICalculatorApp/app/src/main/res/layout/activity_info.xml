@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#195516"
         android:paddingHorizontal="100dp"
         android:text="Back"
@@ -23,11 +23,10 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="50dp"
+        android:paddingTop="50dp"
         >
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <!-- Table Row 1 -->
         <TableRow>
@@ -52,7 +51,7 @@
                 android:padding="8dp" />
 
             <TextView
-                android:text="< 16"
+                android:text="&lt; 16"
                 android:textSize="22sp"
                 android:padding="8dp" />
         </TableRow>
@@ -143,7 +142,7 @@
                 android:padding="8dp" />
 
             <TextView
-                android:text="> 40"
+                android:text="&gt; 40"
                 android:textSize="22sp"
                 android:padding="8dp" />
         </TableRow>

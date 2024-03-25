@@ -24,11 +24,12 @@
         android:layout_gravity="center_vertical"
         />
     <Button
+        android:text=" "
         android:id="@+id/btnInfo"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:drawableTop="@android:drawable/ic_dialog_info"
-        android:background="none"
+        android:background="@android:color/transparent"
         android:paddingTop="20dp"
         />
 </LinearLayout>
@@ -50,6 +51,7 @@
             android:id="@+id/edtHeight"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:textColor="@color/white"
             android:hint="(cm)"
             />
     </LinearLayout>

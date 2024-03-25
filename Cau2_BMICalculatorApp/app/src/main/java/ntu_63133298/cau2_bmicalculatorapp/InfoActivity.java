@@ -1,6 +1,8 @@
 package ntu_63133298.cau2_bmicalculatorapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +25,15 @@ public class InfoActivity extends AppCompatActivity {
             return insets;
         });
 
-
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(toMainActivity);
     }
+
+    View.OnClickListener toMainActivity = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent infoToMain = new Intent(InfoActivity.this, MainActivity.class);
+            startActivity(infoToMain);
+        }
+    };
 }

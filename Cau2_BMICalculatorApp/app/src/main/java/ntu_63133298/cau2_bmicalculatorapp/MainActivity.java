@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         getViews();
 
         btnCal.setOnClickListener(calculateBMI);
+        btnInfo.setOnClickListener(toInfoActivity);
     }
 
     public void getViews()
