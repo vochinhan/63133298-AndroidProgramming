@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v)
         {
-            Intent mainToInfo = new Intent(MainActivity.this, MainActivity.class);
+            Intent mainToInfo = new Intent(MainActivity.this, InfoActivity.class);
             startActivity(mainToInfo);
         }
     };

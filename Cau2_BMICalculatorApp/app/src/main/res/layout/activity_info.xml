@@ -1,6 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical"
+    tools:context=".InfoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#195516"
+        android:paddingHorizontal="100dp"
+        android:text="Back"
+        android:textSize="30dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Table Row 1 -->
+        <TableRow>
+            <TextView
+                android:text="Weight Category"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="Range"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 2 -->
+        <TableRow>
+            <TextView
+                android:text="Severe Thinness"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="< 16"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 3 -->
+        <TableRow>
+            <TextView
+                android:text="Moderate Thinness"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="16 - 17"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 4 -->
+        <TableRow>
+            <TextView
+                android:text="Mild Thinness"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="17 - 18.5"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 5 -->
+        <TableRow>
+            <TextView
+                android:text="Normal"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="18.5 - 25"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 6 -->
+        <TableRow>
+            <TextView
+                android:text="Overweight"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="25 - 30"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 7 -->
+        <TableRow>
+            <TextView
+                android:text="Obese Class I"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="30 - 35"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 8 -->
+        <TableRow>
+            <TextView
+                android:text="Obese Class II"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="35 - 40"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Table Row 9 -->
+        <TableRow>
+            <TextView
+                android:text="Obese Class III"
+                android:textSize="22sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:text="> 40"
+                android:textSize="22sp"
+                android:padding="8dp" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
