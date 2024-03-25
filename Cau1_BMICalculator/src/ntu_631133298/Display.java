@@ -121,6 +121,10 @@ public class Display extends JFrame {
 		
 		float fWeight = Float.parseFloat(strWeight);
 		float fHeight = Float.parseFloat(strHeight);
+		
+		float bmi = fWeight / (fHeight/100 * fHeight/100);
+		String strBMI = Float.toString(bmi);
+		tfRes.setText(strBMI);
 	}
 	
 	public void clearText()
