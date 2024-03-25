@@ -129,6 +129,8 @@ public class Display extends JFrame {
 	
 	public void clearText()
 	{
-		
+		tfWeight.setText("");
+		tfHeight.setText("");
+		tfRes.setText("");
 	}
 }
