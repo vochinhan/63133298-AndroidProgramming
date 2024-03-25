@@ -12,12 +12,13 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Display extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField tfAge;
 	private JTextField tfHeight;
 	private JTextField tfWeight;
 	private JTextField tfRes;
@@ -51,54 +52,34 @@ public class Display extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Age");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		lblNewLabel.setBounds(34, 24, 68, 30);
-		contentPane.add(lblNewLabel);
-		
-		tfAge = new JTextField();
-		tfAge.setBounds(109, 31, 162, 23);
-		contentPane.add(tfAge);
-		tfAge.setColumns(10);
-		
-		JLabel lblGender = new JLabel("Gender");
-		lblGender.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		lblGender.setBounds(34, 65, 68, 30);
-		contentPane.add(lblGender);
-		
 		JLabel lblHeight = new JLabel("Height");
-		lblHeight.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		lblHeight.setBounds(34, 106, 68, 30);
+		lblHeight.setFont(new Font("Times New Roman", Font.PLAIN, 22));
+		lblHeight.setBounds(34, 39, 68, 30);
 		contentPane.add(lblHeight);
 		
 		JLabel lblWeight = new JLabel("Weight");
-		lblWeight.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		lblWeight.setBounds(34, 147, 68, 30);
+		lblWeight.setFont(new Font("Times New Roman", Font.PLAIN, 22));
+		lblWeight.setBounds(34, 91, 68, 30);
 		contentPane.add(lblWeight);
-		
-		JLabel lblNewLabel_1 = new JLabel("(2 - 120)");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		lblNewLabel_1.setBounds(281, 24, 68, 30);
-		contentPane.add(lblNewLabel_1);
 		
 		tfHeight = new JTextField();
 		tfHeight.setColumns(10);
-		tfHeight.setBounds(109, 113, 162, 23);
+		tfHeight.setBounds(112, 34, 162, 35);
 		contentPane.add(tfHeight);
 		
 		tfWeight = new JTextField();
 		tfWeight.setColumns(10);
-		tfWeight.setBounds(109, 153, 162, 23);
+		tfWeight.setBounds(112, 92, 162, 34);
 		contentPane.add(tfWeight);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("(kg)");
-		lblNewLabel_1_1.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		lblNewLabel_1_1.setBounds(281, 147, 68, 30);
+		lblNewLabel_1_1.setFont(new Font("Times New Roman", Font.PLAIN, 22));
+		lblNewLabel_1_1.setBounds(284, 92, 68, 30);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("(cm)");
-		lblNewLabel_1_2.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		lblNewLabel_1_2.setBounds(281, 106, 68, 30);
+		lblNewLabel_1_2.setFont(new Font("Times New Roman", Font.PLAIN, 22));
+		lblNewLabel_1_2.setBounds(284, 34, 68, 30);
 		contentPane.add(lblNewLabel_1_2);
 		
 		JLabel lblBmi = new JLabel("BMI");
@@ -109,23 +90,27 @@ public class Display extends JFrame {
 		tfRes = new JTextField();
 		tfRes.setEditable(false);
 		tfRes.setColumns(10);
-		tfRes.setBounds(109, 203, 162, 30);
+		tfRes.setBounds(112, 206, 162, 35);
 		contentPane.add(tfRes);
 		
-		JRadioButton radioMale = new JRadioButton("Male");
-		radioMale.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-		radioMale.setSelected(true);
-		radioMale.setBounds(108, 71, 68, 23);
-		contentPane.add(radioMale);
-		
-		JRadioButton radioFemale = new JRadioButton("Female");
-		radioFemale.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-		radioFemale.setBounds(179, 72, 78, 23);
-		contentPane.add(radioFemale);
-		
 		JButton btnCal = new JButton("Calculate");
+		btnCal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculateBMI();
+			}
+		});
 		btnCal.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		btnCal.setBounds(310, 188, 105, 49);
+		btnCal.setBounds(112, 146, 120, 49);
 		contentPane.add(btnCal);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		btnClear.setBounds(251, 146, 120, 49);
+		contentPane.add(btnClear);
+	}
+	
+	public void calculateBMI()
+	{
+		
 	}
 }
