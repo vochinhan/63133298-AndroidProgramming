@@ -1,5 +1,6 @@
 package ntu_63133298.cau2_bmicalculatorapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     EditText edtHeight, edtWeight, edtBMI;
-    Button btnCal;
+    Button btnCal, btnInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,18 @@ public class MainActivity extends AppCompatActivity {
         edtWeight = findViewById(R.id.edtWeight);
         edtBMI = findViewById(R.id.edtBMI);
         btnCal = findViewById(R.id.btnCal);
+        btnInfo = findViewById(R.id.btnInfo);
     }
+
+    View.OnClickListener toInfoActivity = new View.OnClickListener()
+    {
+        @Override
+        public void onClick(View v)
+        {
+            Intent mainToInfo = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(mainToInfo);
+        }
+    };
 
     View.OnClickListener calculateBMI = new View.OnClickListener() {
         @Override

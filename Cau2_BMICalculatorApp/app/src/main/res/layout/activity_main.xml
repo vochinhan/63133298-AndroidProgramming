@@ -24,6 +24,7 @@
         android:layout_gravity="center_vertical"
         />
     <Button
+        android:id="@+id/btnInfo"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:drawableTop="@android:drawable/ic_dialog_info"
