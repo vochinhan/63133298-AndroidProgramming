@@ -104,12 +104,26 @@ public class Display extends JFrame {
 		contentPane.add(btnCal);
 		
 		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				clearText();
+			}
+		});
 		btnClear.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		btnClear.setBounds(251, 146, 120, 49);
 		contentPane.add(btnClear);
 	}
 	
 	public void calculateBMI()
+	{
+		String strWeight = tfWeight.getText();
+		String strHeight = tfHeight.getText();
+		
+		float fWeight = Float.parseFloat(strWeight);
+		float fHeight = Float.parseFloat(strHeight);
+	}
+	
+	public void clearText()
 	{
 		
 	}
