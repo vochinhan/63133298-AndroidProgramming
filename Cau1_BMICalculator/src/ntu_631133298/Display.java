@@ -150,6 +150,8 @@ public class Display extends JFrame {
 	
 	public void toInfoPage()
 	{
-		
+		this.setVisible(false);
+		Info info = new Info();
+		info.setVisible(true);
 	}
 }

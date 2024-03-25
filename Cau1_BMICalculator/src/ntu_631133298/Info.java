@@ -8,6 +8,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Info extends JFrame {
 
@@ -34,6 +36,7 @@ public class Info extends JFrame {
 	 * Create the frame.
 	 */
 	public Info() {
+		setTitle("Cau1_BMIInfo");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -59,8 +62,19 @@ public class Info extends JFrame {
 		contentPane.add(textArea);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				back();
+			}
+		});
 		btnBack.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		btnBack.setBounds(302, 11, 98, 23);
 		contentPane.add(btnBack);
+	}
+	
+	public void back()
+	{
+		this.setVisible(false);
+		new Display().setVisible(true);
 	}
 }
