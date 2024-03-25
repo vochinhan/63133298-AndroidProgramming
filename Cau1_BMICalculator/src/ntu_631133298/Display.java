@@ -64,22 +64,22 @@ public class Display extends JFrame {
 		
 		tfHeight = new JTextField();
 		tfHeight.setColumns(10);
-		tfHeight.setBounds(112, 34, 162, 35);
+		tfHeight.setBounds(112, 34, 197, 35);
 		contentPane.add(tfHeight);
 		
 		tfWeight = new JTextField();
 		tfWeight.setColumns(10);
-		tfWeight.setBounds(112, 92, 162, 34);
+		tfWeight.setBounds(112, 92, 197, 34);
 		contentPane.add(tfWeight);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("(kg)");
 		lblNewLabel_1_1.setFont(new Font("Times New Roman", Font.PLAIN, 22));
-		lblNewLabel_1_1.setBounds(284, 92, 68, 30);
+		lblNewLabel_1_1.setBounds(331, 91, 68, 30);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("(cm)");
 		lblNewLabel_1_2.setFont(new Font("Times New Roman", Font.PLAIN, 22));
-		lblNewLabel_1_2.setBounds(284, 34, 68, 30);
+		lblNewLabel_1_2.setBounds(331, 39, 68, 30);
 		contentPane.add(lblNewLabel_1_2);
 		
 		JLabel lblBmi = new JLabel("BMI");
@@ -90,7 +90,7 @@ public class Display extends JFrame {
 		tfRes = new JTextField();
 		tfRes.setEditable(false);
 		tfRes.setColumns(10);
-		tfRes.setBounds(112, 206, 162, 35);
+		tfRes.setBounds(112, 206, 270, 35);
 		contentPane.add(tfRes);
 		
 		JButton btnCal = new JButton("Calculate");
@@ -100,7 +100,7 @@ public class Display extends JFrame {
 			}
 		});
 		btnCal.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		btnCal.setBounds(112, 146, 120, 49);
+		btnCal.setBounds(10, 143, 120, 49);
 		contentPane.add(btnCal);
 		
 		JButton btnClear = new JButton("Clear");
@@ -110,8 +110,18 @@ public class Display extends JFrame {
 			}
 		});
 		btnClear.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		btnClear.setBounds(251, 146, 120, 49);
+		btnClear.setBounds(154, 143, 120, 49);
 		contentPane.add(btnClear);
+		
+		JButton btnInfo = new JButton("BMI Info");
+		btnInfo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				toInfoPage();
+			}
+		});
+		btnInfo.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		btnInfo.setBounds(294, 143, 120, 49);
+		contentPane.add(btnInfo);
 	}
 	
 	public void calculateBMI()
@@ -136,5 +146,10 @@ public class Display extends JFrame {
 		tfWeight.setText("");
 		tfHeight.setText("");
 		tfRes.setText("");
+	}
+	
+	public void toInfoPage()
+	{
+		
 	}
 }
