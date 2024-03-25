@@ -116,8 +116,12 @@ public class Display extends JFrame {
 	
 	public void calculateBMI()
 	{
-		String strWeight = tfWeight.getText();
-		String strHeight = tfHeight.getText();
+		String strWeight = "0";
+		String strHeight = "1";
+		if (!tfWeight.getText().equals(""))
+			strWeight = tfWeight.getText();
+		if (!tfHeight.getText().equals(""))
+			strHeight = tfHeight.getText();
 		
 		float fWeight = Float.parseFloat(strWeight);
 		float fHeight = Float.parseFloat(strHeight);
