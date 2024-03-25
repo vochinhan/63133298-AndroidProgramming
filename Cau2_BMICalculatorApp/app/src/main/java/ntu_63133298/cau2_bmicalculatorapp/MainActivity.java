@@ -42,13 +42,21 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener calculateBMI = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String strHeight = edtHeight.getText().toString();
-            String strWeight = edtWeight.getText().toString();
+            String strHeight = "0";
+            String strWeight = "1";
+
+            if (!edtHeight.getText().toString().isEmpty())
+                strHeight = edtHeight.getText().toString();
+            if (!edtWeight.getText().toString().isEmpty())
+                strWeight = edtWeight.getText().toString();
 
             float fHeight = Float.parseFloat(strHeight);
             float fWeight = Float.parseFloat(strWeight);
 
-            
+            float fBMI = fWeight / (fHeight / 100 * fHeight / 100);
+            String strBMI = Float.toString(fBMI);
+
+            edtBMI.setText(strBMI);
         }
     };
 }
