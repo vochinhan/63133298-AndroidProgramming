@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager2Land = findViewById(R.id.vp2Land);
         landscapeAdapter = new LandscapeAdapter(this, data);
         viewPager2Land.setAdapter(landscapeAdapter);
+        ViewPager2.PageTransformer transformer = new ZoomOutPageTransformer();
+        viewPager2Land.setPageTransformer(transformer);
         viewPager2Land.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
