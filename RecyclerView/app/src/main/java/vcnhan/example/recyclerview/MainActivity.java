@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerLand);
 
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        RecyclerView.LayoutManager linearHorizontalLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        RecyclerView.LayoutManager linearHorizontalLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
         RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setLayoutManager(gridLayoutManager);
 
         landscapeAdapter = new LandscapeAdapter(this, data);
         recyclerView.setAdapter(landscapeAdapter);
